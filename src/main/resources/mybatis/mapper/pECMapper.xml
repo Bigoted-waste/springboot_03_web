@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cola.dao.PECDao">
+    <resultMap id="PECDaoMap" type="com.cola.pojo.Pec">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="ip" property="ip"/>
+        <result column="usability" property="usability"/>
+        <result column="sign" property="sign"/>
+        <result column="problem" property="problem"/>
+        <result column="state" property="state"/>
+        <result column="date" property="date"/>
+        <result column="web" property="web"/>
+    </resultMap>
+    <select id="getAll" resultMap="PECDaoMap">
+        select  * from pec
+    </select>
+</mapper>
